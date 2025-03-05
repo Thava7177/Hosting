@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+</head>
+<body>
+    {% if user_details %}
+        <h2>Welcome, {{ user_details.user_name }}</h2>
+        <p>Details: {{ user_details.details }}</p>
+        <img src="{{user_details.image.url}}" alt="No Image" width="200px" height="200px">
+        <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        <p>Please log in to view details.</p>
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</body>
+</html>
