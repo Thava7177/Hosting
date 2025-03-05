@@ -84,6 +84,7 @@ DATABASES = {
     }
 }
 
+ALLOWED_HOSTS = ["your-project.up.railway.app", "0.0.0.0"]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
