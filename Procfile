@@ -1,1 +1,1 @@
-web: gunicorn sample_Hosting.wsgi:application
+web: gunicorn app.wsgi:application
